@@ -10,7 +10,7 @@ namespace VirtualPet
     public class Pet
     {
         private int hunger = 80;
-        private int energy = 50;
+        private int energy = 0;
         private int poop = 0;
         private int life = 200;
         private int bored = 0;
@@ -39,7 +39,7 @@ namespace VirtualPet
         public void Feed()
         {
             hunger += 15;
-            energy -= 10;
+            energy += 10;
             life -= 10;
             poop += 10;
             bored += 10;
@@ -54,7 +54,7 @@ namespace VirtualPet
         public void Kick()
         {
             life -= 5;
-            energy -= 20;
+            energy += 20;
             poop += 10;
             hunger -= 10;
 
@@ -62,7 +62,7 @@ namespace VirtualPet
         public void ToBed()
         {
             life -= 5;
-            energy += 20;
+            energy -= 20;
             hunger -= 10;
             poop += 10;
             bored += 10;
@@ -70,7 +70,7 @@ namespace VirtualPet
         public void Play()
         {
             life -= 5;
-            energy -= 20;
+            energy += 20;
             hunger -= 20;
             poop += 10;
             bored -= 20;
